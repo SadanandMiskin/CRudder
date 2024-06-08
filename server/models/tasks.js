@@ -1,21 +1,22 @@
+import { name } from "ejs"
 import mongoose from "mongoose"
 
 const taskSchema = mongoose.Schema({
     taskTitle: {
         type: String,
-        required: true
+        // required: true
     },
     taskDescription: {
         type: String,
         required: true
     },
-    date: {
+    dueDate: {
         type: Date,
-        required: true,
+        // required: true,
         default: Date.now()
     }
 })
 
-const tasksModel = mongoose.Model( 'tasksModel' , taskSchema)
+const tasksModel = mongoose.model( 'tasksModel' , taskSchema)
 
 export default tasksModel
