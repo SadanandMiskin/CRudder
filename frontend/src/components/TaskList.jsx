@@ -21,7 +21,7 @@ function TaskList() {
         <div className="table-responsive">
            
                 
-                {Array.isArray(taskList) && taskList.length>0 ? (
+                {Array.isArray(taskList) ? (
                     <tbody>
                         {/* {console.log(taskList)} */}
                         
@@ -45,11 +45,9 @@ function TaskList() {
                     </tbody>
                 ) : (
                     <tbody>
-                        <h6 style={{
-                            color: 'red',
-                            display: 'flex',
-                            justifyContent: 'center'
-                        }}>No Tasks yet, Please Add it :)</h6>
+                        <tr>
+                            <td colSpan="4">Loading tasks...</td>
+                        </tr>
                     </tbody>
                 )}
            
