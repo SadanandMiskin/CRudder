@@ -4,11 +4,16 @@
   "main": "server.js",
   "type": "module",
   "author": "sadanand",
+  "scripts": {
+    "start": "node --env-file .env server.js",
+    "dev": "nodemon --env-file .env server.js"
+  },
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.20.2",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "mongoose": "^8.4.1"
+    "mongoose": "^8.4.1",
+    "nodemon": "^3.1.3"
   }
 }
