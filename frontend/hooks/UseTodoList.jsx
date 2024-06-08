@@ -1,5 +1,5 @@
 import { useState ,useEffect } from "react"
-
+import axios from 'axios'
 
 const UseTodoList = () => {
 
@@ -11,8 +11,9 @@ const UseTodoList = () => {
     const [editedDueDate, setEditedDueDate] = useState("")
 
     useEffect(()=>{
-        fetch.get('http://localhost:3000/display')
+        axios.get('http://localhost:3000/display')
             .then((tasks)=> {
+                // console.log(tasks.data)
                 setTaskList(tasks.data)
             })
             .catch((err)=>{
@@ -47,7 +48,7 @@ const UseTodoList = () => {
             return 
         }
 
-        fetch.post(`${process.env.REACT_APP_BACKEND}/update/` + id, editedData)
+         axios.post(`http://localhost:3000/update/` + id, editedData)
             .then(result => {
                 console.log(result) 
                 setEditableId(null) 
@@ -60,7 +61,7 @@ const UseTodoList = () => {
     }
 
     const deleteTask = (id) => {
-        fetch.delete(`${process.env.REACT_APP_BACKEND}/delete/` + id)
+         axios.delete(`http://localhost:3000/delete/` + id)
             .then(result => {
                 console.log(result);
                 window.location.reload();
@@ -83,5 +84,5 @@ const UseTodoList = () => {
     };
 }
 
-export default useTodoList;
+export default UseTodoList;
 

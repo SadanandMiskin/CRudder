@@ -14,9 +14,11 @@ import path from 'path'
 import express from 'express'
 import bodyParser from 'body-parser'
 import ejs from 'ejs'
+import cors from 'cors'
 
 const app = express() 
 
+app.use(cors())
 app.set('views', path.join(__dirname, '../frontend/views'))
 app.set("view engine", "ejs")
 app.use(express.static(path.join(__dirname , "./frontend/assets")))
