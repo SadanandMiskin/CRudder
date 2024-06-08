@@ -4,9 +4,9 @@ const router = express.Router()
 
 
 router
-    .route('/delete')
+    .route('/delete/:id')
     .delete((req,res)=>{
-        const {id} = req.body
+        const {id} = req.params
         tasksModel.deleteOne({_id: id})
         .then(()=>{
             console.log('task deleted')
