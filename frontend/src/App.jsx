@@ -9,8 +9,10 @@ function App() {
             <div className="row">
                 <div className="col-md-7">
                     <h2 className="text-center" style={{
-                      color: 'white'
-                    }}>CRUDDER:<br></br> A Task App</h2>
+                      color: 'white',
+                  maxWidth: '100%'
+                    }}>CRUDDER<br></br></h2>
+                    <p className='text-center'>(A Task App)</p>
                     <TaskList />
                 </div>
                 <div className="col-md-5" style={{
@@ -20,7 +22,9 @@ function App() {
                     <AddTaskForm />
                 </div>
             </div>
+            <h6 style={{color:'white', display: 'flex', justifyContent:'center', marginTop: '20px'}}>😄Sadanand Miskin</h6>
         </div>
+        
     );
 }
 
