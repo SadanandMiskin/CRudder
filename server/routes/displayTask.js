@@ -8,7 +8,9 @@ router
     .get((req,res)=>{
         tasksModel.find()
             .then((tasks)=>{
-                res.render('home', {tasks: tasks})                
+                res.json({
+                    status: 'running'
+                })            
             })
             .catch((err)=>{
                 console.error(err)

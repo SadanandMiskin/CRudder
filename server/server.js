@@ -19,9 +19,7 @@ import cors from 'cors'
 const app = express() 
 
 app.use(cors())
-app.set('views', path.join(__dirname, '../frontend/views'))
-app.set("view engine", "ejs")
-app.use(express.static(path.join(__dirname , "./frontend/assets")))
+
 
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.json())
@@ -35,9 +33,8 @@ app.use('/', displayTask)
 app.use('/' , deleteTask)
 app.use('/' , updateTask)
 
-
+db().then(()=>{ 
 app.listen(3000, ()=> {
-    db().then(()=>{    
     console.log('server is listening')
     })
 })
