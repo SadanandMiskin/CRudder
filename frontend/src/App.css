@@ -10,7 +10,7 @@ body {
 }
 
 .col-md-7, .col-md-8{
-  max-width: 90%;
+  max-width: 100%;
 }
 
 h4, p {
