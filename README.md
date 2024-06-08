@@ -1,6 +1,7 @@
 # CRudder
 
 CRudder is a task management application built using MERN stack. It allows users to create, read, update, and delete (CRUD) tasks.
+<center> Deployed on  <p><a href="https://crudder.vercel.app/">▶️▶️Vercel◀️◀️</a></p></center>
 <br>
 <img src="https://github.com/SadanandMiskin/CRudder/assets/119523972/43e9c9f4-63d7-4b24-9228-755a00ab6e31" style="width: 400px; height: 200px;">
 
